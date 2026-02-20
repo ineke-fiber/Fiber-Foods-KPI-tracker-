@@ -466,10 +466,34 @@ function emptyKpis(){ return Array.from({length:5},(_,i)=>({obj:i===4?'Personal 
 
 let appData={}, taskData={}, ctData={}, currentView='home';
 
+const SB_URL = 'https://ujvmqlmzrlfwbmbexmzy.supabase.co';
+const SB_KEY = 'sb_publishable_fMClPZof5XcYfUzDt2v0mg_XrhrfMIY';
+
+async function sbGet(key) {
+  const res = await fetch(`${SB_URL}/rest/v1/kpi_data?key=eq.${encodeURIComponent(key)}&select=value`, {
+    headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
+  });
+  const rows = await res.json();
+  return rows.length ? rows[0].value : null;
+}
+
+async function sbSet(key, value) {
+  await fetch(`${SB_URL}/rest/v1/kpi_data`, {
+    method: 'POST',
+    headers: {
+      'apikey': SB_KEY,
+      'Authorization': `Bearer ${SB_KEY}`,
+      'Content-Type': 'application/json',
+      'Prefer': 'resolution=merge-duplicates'
+    },
+    body: JSON.stringify({ key, value, updated_at: new Date().toISOString() })
+  });
+}
+
 async function loadData(){
-  try{ const r=await window.storage.get('ffkpi3'); if(r) appData=JSON.parse(r.value); }catch(e){}
-  try{ const r=await window.storage.get('fftask3'); if(r) taskData=JSON.parse(r.value); }catch(e){}
-  try{ const r=await window.storage.get('ffct3'); if(r) ctData=JSON.parse(r.value); }catch(e){}
+  try{ const r=await sbGet('ffkpi3'); if(r) appData=r; }catch(e){}
+  try{ const r=await sbGet('fftask3'); if(r) taskData=r; }catch(e){}
+  try{ const r=await sbGet('ffct3'); if(r) ctData=r; }catch(e){}
   TEAM_MEMBERS.forEach(m=>{
     if(!appData[m.id]){
       const defs=DK[m.id]||[];
@@ -481,15 +505,24 @@ async function loadData(){
 }
 
 async function saveAll(){
+  const el=document.getElementById('save-toast');
+  el.style.color='var(--green)';
+  el.innerHTML='⏳ Saving…'; el.classList.add('show');
   try{
-    await window.storage.set('ffkpi3',JSON.stringify(appData));
-    await window.storage.set('fftask3',JSON.stringify(taskData));
-    await window.storage.set('ffct3',JSON.stringify(ctData));
-    const el=document.getElementById('save-toast');
-    el.classList.add('show'); setTimeout(()=>el.classList.remove('show'),2000);
-  }catch(e){ alert('Save failed: '+e.message); }
+    await Promise.all([
+      sbSet('ffkpi3', appData),
+      sbSet('fftask3', taskData),
+      sbSet('ffct3', ctData),
+    ]);
+    el.innerHTML='✓ Saved for everyone';
+    setTimeout(()=>el.classList.remove('show'),2500);
+  }catch(e){
+    el.style.color='var(--red)';
+    el.innerHTML='✗ Save failed';
+    setTimeout(()=>el.classList.remove('show'),3000);
+  }
 }
-function autosave(){ clearTimeout(window._st); window._st=setTimeout(saveAll,1500); }
+function autosave(){ clearTimeout(window._st); window._st=setTimeout(()=>saveAll(),1500); }
 
 // ---- SIDEBAR ----
 function renderSidebar(){
@@ -742,7 +775,17 @@ function rmAssign(tid,n){
 }
 function esc(s){ if(!s)return''; return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-async function init(){ await loadData(); renderSidebar(); renderHome(); }
+async function init(){
+  document.getElementById('main-content').innerHTML=`
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:60vh;gap:16px;color:var(--text3)">
+      <div style="font-size:32px">🌱</div>
+      <div style="font-family:'Roboto Condensed',sans-serif;font-size:18px;font-weight:700">Loading Fiber Foods KPI Tracker…</div>
+      <div style="font-size:13px">Connecting to shared database</div>
+    </div>`;
+  await loadData();
+  renderSidebar();
+  renderHome();
+}
 init();
 </script>
 </body>
