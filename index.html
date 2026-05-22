@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fiber Foods — KPI Tracker 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -147,6 +148,15 @@ html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);colo
 .toast{position:fixed;bottom:24px;right:24px;background:var(--accent);color:#fff;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:500;opacity:0;transform:translateY(8px);transition:all .25s;pointer-events:none;z-index:100}
 .toast.show{opacity:1;transform:translateY(0)}
 
+/* ── LOGIN ── */
+#login-screen{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999}
+.login-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:40px 36px;text-align:center;max-width:360px;width:90%;box-shadow:var(--shadow-md)}
+.login-logo{font-family:'DM Serif Display',serif;font-size:22px;color:var(--accent);margin-bottom:4px}
+.login-sub{font-size:13px;color:var(--text3);margin-bottom:28px}
+.login-error{font-size:13px;color:#c94040;background:#fdeaea;border-radius:8px;padding:10px 14px;margin-top:16px;display:none}
+.login-error.show{display:block}
+#login-screen .g_id_signin{display:flex;justify-content:center}
+
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
   :root{--sidebar-w:220px}
@@ -158,6 +168,30 @@ html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);colo
 </style>
 </head>
 <body>
+
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">🌱 Fiber Foods</div>
+    <div class="login-sub">KPI Tracker 2026</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:24px;line-height:1.6">Sign in with your <strong>@fiberfoodsgroup.com</strong> Google account to continue.</p>
+    <div id="g_id_onload"
+      data-client_id="GOOGLE_CLIENT_ID"
+      data-callback="handleGoogleLogin"
+      data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin"
+      data-type="standard"
+      data-shape="rectangular"
+      data-theme="outline"
+      data-text="sign_in_with"
+      data-size="large"
+      data-logo_alignment="left">
+    </div>
+    <div class="login-error" id="login-error">
+      Access denied. Please use your @fiberfoodsgroup.com Google account.
+    </div>
+  </div>
+</div>
 
 <div id="loading-screen">
   <div class="logo">🌱 Fiber Foods</div>
@@ -305,11 +339,11 @@ const DEFAULT_KPIS = {
     { title:'Team Leadership', obj:'Build and retain a high-performing dream team', kpi:'>85% team engagement score; 0 unplanned key departures', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   lot: [
-    { title:'Sales Revenue NL', obj:'Achieve €300K in NL direct sales', kpi:'€300K revenue from NL accounts', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Customer Retention', obj:'Retain 90% of existing customers', kpi:'≥90% customer retention rate', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'New Customer Acquisition', obj:'Acquire 5 new NL customers', kpi:'5 signed new contracts', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'CRM Data Quality', obj:'Maintain complete Pipedrive data', kpi:'≥90% deals with complete data', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Develop key account management skills', kpi:'Complete KAM training; manage 3 key accounts independently', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Retail & Tender Development', obj:'Build relationships and map all relevant producers/suppliers connected to Jumbo, Albert Heijn and Lidl — ready to act fast on hybrid/private label tenders', kpi:'≥3 retail relationships mapped and active; 1 tender or pilot opportunity initiated', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Strategic New Business', obj:'Build and develop key strategic partnerships with Van Loon, Plukon, GOB, Hilton Foods, Coroos and Verstegen — positioning PrimeJack® as a scalable hybrid ingredient solution', kpi:'≥2 pilots or commercial product concepts launched; ≥1 long-term partnership signed', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Account Management & Revenue', obj:'Take ownership of existing customer relationships, pipeline follow-up, forecasting and CRM structure to grow current accounts and reach €1.1M revenue', kpi:'€1.1M revenue in 2026; ≥90% pipeline data quality in Pipedrive; stable recurring business from existing accounts', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Product Development & Innovation', obj:'Help launch new commercial concepts: fish burger concept and tapas line with Taste of Europe', kpi:'≥2 new concepts brought to commercial pilot stage', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Develop negotiation skills, financial/commercial knowledge, leadership skills and commercial process structure over the next 12 months', kpi:'Complete 1 relevant training; demonstrable improvement in deal structure and commercial process; proposal for junior sales support actioned', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   lia: [
     { title:'Financial Reporting', obj:'Deliver accurate monthly P&L within 5 business days', kpi:'100% on-time delivery of monthly financial reports', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
@@ -770,9 +804,37 @@ function toggleAssignee(taskId, memberId) {
 }
 
 // ═══════════════════════════════════════════════════════
+// GOOGLE AUTH
+// ═══════════════════════════════════════════════════════
+const ALLOWED_DOMAIN = 'fiberfoodsgroup.com';
+let currentUser = null;
+
+function parseJwt(token) {
+  try {
+    return JSON.parse(atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')));
+  } catch(e) { return null; }
+}
+
+function handleGoogleLogin(response) {
+  const payload = parseJwt(response.credential);
+  if (!payload) return showLoginError();
+  const email = payload.email || '';
+  if (!email.endsWith('@' + ALLOWED_DOMAIN)) {
+    return showLoginError();
+  }
+  currentUser = { email, name: payload.name, picture: payload.picture };
+  document.getElementById('login-screen').style.display = 'none';
+  startApp();
+}
+
+function showLoginError() {
+  document.getElementById('login-error').classList.add('show');
+}
+
+// ═══════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════
-async function init() {
+async function startApp() {
   try {
     await loadData();
   } catch(e) {
@@ -784,6 +846,12 @@ async function init() {
   document.getElementById('app').style.display = 'flex';
   renderSidebar();
   renderHome();
+}
+
+function init() {
+  // Login screen is shown by default — Google GSI handles the rest
+  // Loading screen stays hidden until login succeeds
+  document.getElementById('loading-screen').style.display = 'none';
 }
 
 init();
