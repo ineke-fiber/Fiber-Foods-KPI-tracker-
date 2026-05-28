@@ -321,127 +321,127 @@ const TASKS = [
 ];
 
 // ═══════════════════════════════════════════════════════
-// DEFAULT KPI DATA PER PERSON
+// DEFAULT KPI DATA PER PERSON (from Supabase ffkpi3)
 // ═══════════════════════════════════════════════════════
 const DEFAULT_KPIS = {
   inez: [
-    { title:'Revenue Growth NL/EU', obj:'Grow NL/EU revenue by 40% vs 2025', kpi:'€480K NL/EU revenue by Dec 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'New Account Acquisition', obj:'Sign 8 new B2B customers in NL/EU', kpi:'8 signed contracts by Q3', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Pipeline Management', obj:'Maintain a healthy, accurate sales pipeline', kpi:'€2M pipeline value, 90% Pipedrive data quality', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Partnership Development', obj:'Close 2 strategic distribution partnerships', kpi:'2 signed distribution agreements by Q4', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Strengthen negotiation and closing skills', kpi:'Complete advanced sales training; close rate >35%', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Win with Retail Suppliers — 1.2M EUR TO', obj:'Win with Retail Suppliers in blended meat & fish — 1.2M EUR TO', kpi:'Develop current customers & win new customers in BNLX (20 customers, 800K EUR TO)\nAccelerate winning applications: 5 customers, 400K TO\nOpen German market: 2 customer agreements\nWin orders for Hybrid by push from at least one Retailer (Lidl?)', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Conquer Foodservice & Partnerships — 0.2M EUR TO', obj:'Conquer Foodservice (2A) & Win through partnerships with Ingredient suppliers (2B) — 0.2M EUR TO', kpi:'Win with Global accounts locally e.g. IKEA test set in 2027\nWin with Catering companies: HAI deal launched with 100K TO\nPartner on joint blends: 2 launches with joint applications\nPartner through business models: lock 1 partnership', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Increase efficiency & impact', obj:'Increase efficiency & impact: more customer contacts, leads and deals', kpi:'CRM implementation: Increased efficiency, more customer contact, onboard trainee on sales/marketing\nOnline to Offline: Increased Traffic, Leads and deals closed\nSharpened customer story: Increased hit rate, volumes and profitability', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Steady group of investors', obj:'Steady group of investors ready for conversion and/or growth', kpi:'From April 2026 schedule meetings with new investors; make target list with Peakbridge', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Personal Development', kpi:'Laser focus on top 20 prospects; strong leadership and time management on sales and BD', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   ineke: [
-    { title:'Break-Even Achievement', obj:'Lead company to operational break-even by Q4', kpi:'Monthly P&L break-even by December 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Series A Readiness', obj:'Prepare and initiate Series A fundraising process', kpi:'Data room ready Q2; first investor meetings Q3', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Board & Investor Relations', obj:'Maintain strong investor confidence and reporting cadence', kpi:'Quarterly investor updates delivered on time; 100% reporting compliance', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Strategic Partnerships', obj:'Close 1 transformative strategic partnership', kpi:'1 signed strategic partnership agreement', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Team Leadership', obj:'Build and retain a high-performing dream team', kpi:'>85% team engagement score; 0 unplanned key departures', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Win grants', obj:'Win grants', kpi:'Win 580K in grant money\n- Streamline fundraising with Malou and Marion (with AI support)\n- Apply for at least 6 matching grants that support production capacity and/or P&L', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Guarantee smooth supply chain', obj:'Guarantee smooth supply chain', kpi:'Efficient and quality process from order to delivery\n- Process is clear and team members are well placed\n- Systems and service providers are in place\n- Maximizing cost reduction to lower cost price', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Consistent following of financial model', obj:'Consistent following of financial model', kpi:'- Weekly update to the board\n- Quarterly update to investors\n- Work closely with Lia, Marion, Raymond, Reender towards real-time accurate financial transparency', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'New business development through ingredient innovation', obj:'New business development through ingredient innovation', kpi:'- Validate the unique fiber profile of our PJ with research institutes and experts\n- Establish partnerships to explore new markets in collaboration with Inez\n- Further build on the ON value chain in UG, incl. increasing capacity and market development\n- Test 1 product market fit in 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Personal Development', kpi:'Work smartly together with the team and only do what you need to do\nDo not get dragged into cashflow problems — keep track, prevent spending outside budget, involve the board', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   lot: [
-    { title:'Retail & Tender Development', obj:'Build relationships and map all relevant producers/suppliers connected to Jumbo, Albert Heijn and Lidl — ready to act fast on hybrid/private label tenders', kpi:'≥3 retail relationships mapped and active; 1 tender or pilot opportunity initiated', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Strategic New Business', obj:'Build and develop key strategic partnerships with Van Loon, Plukon, GOB, Hilton Foods, Coroos and Verstegen — positioning PrimeJack® as a scalable hybrid ingredient solution', kpi:'≥2 pilots or commercial product concepts launched; ≥1 long-term partnership signed', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Account Management & Revenue', obj:'Take ownership of existing customer relationships, pipeline follow-up, forecasting and CRM structure to grow current accounts and reach €1.1M revenue', kpi:'€1.1M revenue in 2026; ≥90% pipeline data quality in Pipedrive; stable recurring business from existing accounts', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Product Development & Innovation', obj:'Help launch new commercial concepts: fish burger concept and tapas line with Taste of Europe', kpi:'≥2 new concepts brought to commercial pilot stage', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Develop negotiation skills, financial/commercial knowledge, leadership skills and commercial process structure over the next 12 months', kpi:'Complete 1 relevant training; demonstrable improvement in deal structure and commercial process; proposal for junior sales support actioned', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Win with retail: Launch blended meat in NL', obj:'Win with retail: Launch blended meat in NL', kpi:'Increase TO: Four Seasons, Smilde, Chateau Viande, Koning Vlees\nIntroductions: Gepo Leverworst in 3 chains (AH, Jumbo, Picnic), Westfort burgers in SU, Plukon kipkrokant in Plus, Pieter van Meel 5 product introductions, 2Sisters/Remkes\nNew Developments: Compaxo, Vion, Sopraco (Hybrid range), Denibar\nNew Lead Generation: Analyse full EG list and set correct leads in Pipedrive by April', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Conquer FS: Launch blended 40% Burgers in FS NL', obj:'Conquer FS: Launch blended 40% Burgers in FS NL', kpi:'Launch 40% PJ burger at Efteling Q2 / Q4 Port Aventura\nCampaign and rollout to all FS wholesalers (Sligro, Hanos, etc.)\nLaunch and accelerate Zandbergen Hybrid portfolio', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Commercial Development: Lead Pipedrive', obj:'Commercial Development: Lead Pipedrive', kpi:'- Update and constantly control data quality in Pipedrive\n- Sales flow and data availability: Contacts, Funnel value, forecast', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Commercial Development: Online to Offline Marketing', obj:'Commercial Development: Online to Offline Marketing', kpi:'Create overview of key fairs, who goes where and what comms is needed\nWebsite review\nLinkedIn plan based on fairs and key launches', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Personal Development', kpi:'Join commercial strategy sessions (e.g. Sue)\nRedesign Food Value program\nPlant FWD presentation', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   lia: [
-    { title:'Financial Reporting', obj:'Deliver accurate monthly P&L within 5 business days', kpi:'100% on-time delivery of monthly financial reports', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Cash Flow Management', obj:'Maintain minimum 3 months cash runway at all times', kpi:'Cash runway ≥3 months every month', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Grant Administration', obj:'Manage and report on all active grants', kpi:'0 grant reporting delays; full compliance', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Budget Management', obj:'Keep operational costs within 5% of budget', kpi:'Actual vs budget variance ≤5%', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Deepen knowledge of startup financial modeling', kpi:'Complete financial modeling course; deliver Series A model', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Verwerking Financiële Mutaties', obj:'Verwerking Financiële Mutaties', kpi:'Minimaal 90% van alle financiële mutaties (inkoop/verkoopfacturen, betalingen, bankmutaties) wordt binnen 7 werkdagen na ontstaan volledig en correct verwerkt', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Tijdige en Correcte Facturatie', obj:'Tijdige en Correcte Facturatie', kpi:'Minimaal 90% van de verkoopfacturen wordt binnen 3 werkdagen na order/levering correct verzonden en conform het vastgestelde debiteurenproces opgevolgd', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Kwaliteit en Nauwkeurigheid van de Administratie', obj:'Kwaliteit en Nauwkeurigheid van de Administratie', kpi:'Het aantal administratieve fouten in de financiële administratie dat leidt tot correcties, herboekingen of creditnota\'s bedraagt maximaal 3 per maand', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Rapportage en Compliance', obj:'Rapportage en Compliance', kpi:'Maandelijks wordt uiterlijk op de 5e werkdag een volledig en juist financieel overzicht aangeleverd, in overeenstemming met de geldende wet- en regelgeving (o.a. BTW)', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Persoonlijke Ontwikkeling', obj:'Persoonlijke Ontwikkeling', kpi:'Onderzoeksvraag: hoe brengen we de Oegandese en Nederlandse administratie het beste bij elkaar (samen met Raymond, Ineke, Reender, Marion)\nNadenken over een persoonlijk ontwikkelingsdoel', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   diederik: [
-    { title:'Product Innovation', obj:'Launch 2 new product formats to market', kpi:'2 products launched and sold to ≥3 customers each', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Oysternut Value Chain', obj:'Establish product-market fit for Oysternut', kpi:'1 confirmed PMF with commercial customer', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'R&D Pipeline', obj:'Maintain a 6-month innovation pipeline', kpi:'≥3 products in active development at all times', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Quality Standards', obj:'Maintain 100% batch compliance with EU food law', kpi:'0 quality non-conformities shipped to customers', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Strengthen commercial awareness of R&D', kpi:'Attend 2 industry events; generate 1 co-development partnership lead', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Contribute fully as a board member', obj:'Contribute fully as a board member to drive company growth, make strategic decisions, and strengthen teamwork', kpi:'- Be the driving force for board meetings, make sure they start on time and are structured by 31/03/2026\n- Review structure and output of board meeting quarterly and give feedback for improvement', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Lead the R&D department', obj:'Take full ownership of leading the R&D department, providing clear direction and ensuring projects and priorities are aligned', kpi:'- Implement R&D meetings with the right people and frequency by 28/02/2026\n- Use AI as an R&D colleague to improve accessibility of all documentation by 01/06/2026\n- Build a structure to oversee all R&D activities in NL, UG and KE by 31/03/2026\n- Provide guidance on new S&OP structure by 14/02/2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Develop winning applications', obj:'Develop winning applications by collaborating with customers and optimizing our product portfolio', kpi:'- By 31/12/2026 the Organic portfolio will be expanded to at least 3 available sizes\n- By 31/12/2026 narrow down the portfolio to 5 sizes that best fit customer needs (excl. organic)\n- Develop at least 5 hybrid applications approved by customers by 31/12/2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Optimize the production process', obj:'Optimize the production process — cost, technical efficiency, and product quality', kpi:'- By 30/06/2026 determine what machinery needs replacing/adjusting at both facilities; implement new dryers at Enimiro by 31/12/2026\n- Map all production costs from sourcing to DJF by 31/03/2026\n- Review production performance mid year and end of year with KE, UG and NL teams', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development: Maintain high engagement', obj:'Personal Development: Maintain high engagement and motivation', kpi:'- Quarterly review with both board members assessing role as driving force (rating "good" or higher)\n- Quarterly workload and motivation review with documented self-assessment score (≥7/10)', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   danique: [
-    { title:'Production Planning', obj:'Produce 37,500 KG to plan and budget', kpi:'37,500 KG produced; cost variance ≤5%', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Supply Chain Reliability', obj:'Maintain reliable supply from UG and KE', kpi:'OTIF ≥90% from farm to warehouse', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Supplier Development', obj:'Diversify and grow the supplier base', kpi:'Add 5 new certified farmers; 2 regions covered', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Inventory Management', obj:'Optimize stock levels and reduce aging inventory', kpi:'Aging stock <10% of total; stock turnover ≥4x/year', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Develop supply chain systems expertise', kpi:'Implement one digital supply chain tool; team trained', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Forecast-driven supply chain', obj:'Coordinate an end-to-end, forecast-driven supply chain from the Netherlands, in close collaboration with NL, KE and UG colleagues', kpi:'1. New way of working with new team implemented by 28/02/2026\n2. Inventory up-to-date in Exact and S&OP form by 28/02/2026\n3. Forecast-driven supply chain implemented by June 2026, reviewed quarterly', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Hybrid meat product development', obj:'Expand knowledge and hands-on skills in hybrid meat product development, with primary focus on sausage production', kpi:'1. 2 new sausage applications mastered by 30/06/2026\n2. Pilot trials executed and documented for 4 sausage types by 31/12/2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'AI system within R&D', obj:'Implement an AI system within R&D to consolidate all available information on product development, technology, and research', kpi:'1. R&D data structured and accessible for AI-driven analysis by 01/03/2026\n2. AI-generated insights reviewed and reinforced by 01/06/2026\n3. Review quality of AI reports quarterly', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Test plant-based ingredients', obj:'Identify and test plant-based ingredients complementary to jackfruit to achieve products at least 30% plant-based', kpi:'1. Cowpea flour tested as protein enrichment by 01/03/2026\n2. Test minimum 2 other protein sources for hybrid meat with higher protein content by 31/12/2026\n3. Pilot tests with 4 other plant-based ingredients by 01/06/2026\n4. List of complementary plant-based ingredients updated quarterly', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development: Own the supply chain', obj:'Personal Development: Take full ownership of end-to-end supply chain', kpi:'1. Full understanding and mapping of all supply chain steps by 28/02/2026\n2. Personal confidence and comfort in the coordinating role assessed through self-reflection and feedback by June 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   anne: [
-    { title:'Research Output', obj:'Publish or contribute to 2 research outputs', kpi:'2 papers/reports contributed or published', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'IFS Certification Support', obj:'Support IFS certification preparation', kpi:'IFS pre-audit completed; all gaps documented', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Consumer Insights', obj:'Deliver 2 consumer research studies', kpi:'2 studies delivered and presented to commercial team', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Grant Research', obj:'Identify and scope ≥3 new grant opportunities', kpi:'3 grant opportunity briefs submitted to management', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Develop product development commercialisation skills', kpi:'Complete 1 relevant course; present 1 innovation proposal', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Transfer knowledge on cooking and drying', obj:'Transfer the knowledge on cooking and drying into the company', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Understanding water distribution in jackfruit', obj:'Understanding the water distribution in jackfruit applications', kpi:'Road map for product development for dried jackfruit powder', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Prepare 2 publications', obj:'Prepare 2 publications:\n1: Effects of boiling and drying on jackfruit structure\n2: Application oriented', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Collaborate with researchers in Uganda', obj:'Keep exploring possibilities to work together with researchers/team in Uganda', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Personal Development: Find and utilise the connection with the company for own benefit', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   hester: [
-    { title:'Brand Awareness', obj:'Grow brand awareness in target markets', kpi:'+50% website traffic; +30% LinkedIn followers', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Lead Generation via Marketing', obj:'Generate 20 qualified marketing leads per quarter', kpi:'80 qualified leads/year from marketing channels', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Content & SEO', obj:'Build a high-quality content library', kpi:'12 blog posts published; SEO ranking top 10 for 5 keywords', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Trade Shows & Events', obj:'Represent Fiber Foods at 3 key industry events', kpi:'3 events attended; ≥5 qualified leads per event', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Deepen B2B food industry marketing expertise', kpi:'Complete 1 marketing certification; run 1 A/B campaign', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'PrimeJack® website as B2B conversion tool', obj:'By mid-2026, the PrimeJack® website functions as a primary B2B conversion and due-diligence tool', kpi:'Website content reviewed and approved bi-annually by commercial and impact leads\nEvidence-backed claims: 100% of impact, sourcing, and scale claims linked to formal evidence (LCA, certifications) by Q2 2026\nBuyer risk coverage: Top 5 buyer risks explicitly addressed on the website by Q2 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'SEO and SEA as primary B2B lead source', obj:'By mid-2026, SEO and SEA shift to a primary source of high-intent B2B leads', kpi:'Structured content readiness: 100% of core commercial pages use structured, AI-readable formats\nQuarterly optimisation cycle: SEO/SEA performance reviewed quarterly with sales', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'LinkedIn as account-based communication channel', obj:'By end-2026, LinkedIn functions as a targeted account-based communication channel', kpi:'Authority-led content ratio: ≥70% of LinkedIn posts focus on proof, insight, or decision support\nNarrative discipline: 100% of LinkedIn and PR messaging aligned with approved PrimeJack® narrative\nQuarterly review of LinkedIn and PR performance with sales and management', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'AI embedded across all departments', obj:'By end-2026, AI is embedded across all key departments as a productivity and decision-support tool', kpi:'Team onboarding: 100% of employees trained on approved AI tools by Q2\nActive usage: ≥75% of team members use AI tools weekly\nEfficiency gains: At least 20% time reduction on selected recurring tasks by Q3 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Personal Development: Focus time on high-impact work, stay ahead of AI developments', kpi:'Focused workdays: ≥80% of core work scheduled Monday–Wednesday\nReserve 2 hours/week for AI learning, tracked in calendar\nEnrolled in at least one food photography course in 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   naomi: [
-    { title:'UK Revenue', obj:'Achieve €150K in UK sales', kpi:'€150K UK revenue by Dec 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'UK Customer Development', obj:'Sign 3 new UK customers', kpi:'3 signed UK contracts', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'UK Operations', obj:'Run smooth UK fulfilment operations', kpi:'OTIF ≥95% for UK orders', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'UK Market Intelligence', obj:'Deliver quarterly UK market reports', kpi:'4 market reports delivered; 2 strategic insights actioned', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Grow in commercial operations leadership', kpi:'Lead 1 UK-specific initiative end-to-end', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Optimise production process', obj:'Optimise production process - Driving conversion ratio down by product type', kpi:'Reduce the conversion ratio for each product type by analyzing current performance metrics, identifying bottlenecks, and implementing targeted improvements.\nImprove fresh jackfruit conversion ratio by 1% within 12 months.\nReduce raw material waste by at least X%, ensuring waste streams are repurposed or commercially utilised.\nMonitor monthly through quality and production dashboards.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Smooth and reliable supply chain from East Africa to NL', obj:'Foster better processes to ensure a smooth and reliable supply chain from East Africa to NL.', kpi:'Improve and standardise supply chain processes between East Africa and the Netherlands.\nReduce supply delays and errors by 20%, achieve ≥95% OTIF deliveries.\nImplement clear SOPs, improve cross-regional communication routines (weekly alignment check-ins).\nReduce the work NL team need to do to re-pack and re-work goods in NL.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Deliver quality product at NCF', obj:'Deliver quality product at NCF - meeting European standards for all product types & Efficient Production at NCF', kpi:'Maintain valid ISO certification with zero major non-conformities in external audits.\n100% compliance with European food safety, labelling, and import regulations.\nMaintain customer complaints at <1% of total shipments and zero rejected shipments due to quality failures.\nAchieve ≥95% on-time corrective action closure for audit findings.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Deliver UK sales growth', obj:'Deliver UK sales growth for Fibre Foods', kpi:'Drive engagement in the UK market by engaging at least 3 prospects in UK market', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Leverage AI to drive cohesion and productivity', obj:'Leverage AI to drive cohesion and productivity.', kpi:'Actively develop my AI capability by undertaking a relevant AI course and applying these learnings to my role. Use AI tools to improve productivity, enhance communication, streamline processes, and deliver greater efficiency and value to the business.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   malou: [
-    { title:'Grant Acquisition UG', obj:'Secure €200K in grants for Uganda operations', kpi:'€200K in signed grant agreements by Q4', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Reporting Compliance', obj:'Submit all donor reports on time', kpi:'100% on-time donor reporting', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'New Grant Pipeline', obj:'Identify 5 new grant opportunities for UG', kpi:'5 grant opportunity briefs submitted', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'UG Stakeholder Relations', obj:'Maintain strong relationships with UG partners and donors', kpi:'Quarterly stakeholder meetings held; 0 relationship issues', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Strengthen grant writing and impact reporting skills', kpi:'Complete 1 grant writing training; write 2 impact reports', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 1', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 2', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 3', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 4', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Personal Development', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   marion: [
-    { title:'UG Financial Reporting', obj:'Deliver accurate UG monthly financials by day 7', kpi:'100% on-time UG financial reporting', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'UG Cost Control', obj:'Keep UG operational costs within budget', kpi:'UG cost variance ≤5% vs budget', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Payroll & Compliance', obj:'Ensure 100% payroll accuracy and legal compliance', kpi:'0 payroll errors; 100% tax compliance', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Grant Financial Management', obj:'Track and report on all UG grant financials', kpi:'100% grant financial reports submitted on time', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Develop financial systems and controls expertise', kpi:'Implement 1 new financial control; complete 1 accounting course', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 1', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 2', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 3', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 4', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Personal Development', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   denis: [
-    { title:'Production Volume UG', obj:'Deliver planned UG production volume', kpi:'Achieve production targets per quarterly plan', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Quality Standards UG', obj:'Maintain product quality meeting EU specifications', kpi:'0 quality rejections from NL; <2% batch failures', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Farmer Coordination', obj:'Coordinate 30+ active farmer relationships', kpi:'30 active certified farmers; supply reliability ≥90%', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Cost Efficiency', obj:'Reduce production cost per KG by 5%', kpi:'5% reduction in cost per KG vs 2025', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Develop production management leadership', kpi:'Lead 1 process improvement initiative; train 2 team members', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'100% DJF products meet EU requirements', obj:'Ensure 100% of DJF products shipped from Enimiro meet client and EU requirements', kpi:'- 100% compliance of DJF products shipped from Enimiro\n- Complete quality documentation per shipment within 10 days after shipment\n- Ensure a minimum of 90% of major NCs are identified during inspections, walkabouts, and audits at Enimiro are addressed', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Effective R&D process', obj:'Implement an effective R&D process for all scheduled and approved R&D initiatives.', kpi:'- 100% compliance with the approved R&D process across all emerging R&D topics\n- At least 2 successful collaborations with external parties on topics such as packaging, equipment, and use of processing facility by the 31st December 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Support IFS documentation for Fiber Foods BV', obj:'Support the required documentation towards achieving IFS for Fiber Foods BV', kpi:'- Conduct a risk assessment that complies 100% with the audit requirements/IFS standard by the end of Q2 2026\n- Ensure Enimiro meets all supplier requirements per IFS before they renew their FSSC 22000 certification by the end of Q2 of 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Optimize oyster nut value chain in Uganda', obj:'Support the optimization of the oyster nut value chain in Uganda through product and market innovations', kpi:'- Prepare plans and budgets for R&D initiatives at Earth Feeds, Dynamic Action by 8th April 2026\n- Proposal for internal R&D kitchen/lab in Uganda by 30th April 2026\n- Conduct market survey of Oyster nut paste in Busoga region towns by the end of Q2 of 2026\n- Conduct baseline study on postharvest handling practices by 10th April 2026', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Integrate AI to improve work efficiency', obj:'Integrate the use of AI to improve work efficiency', kpi:'- 100% completion of summaries of R&D topics conducted in the past with the aid of AI Paolo by the 30th June 2026\n- Continuous learning on the use of AI tools to increase proficiency with a focus on the quality of prompt given the AI agents', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   isaac: [
-    { title:'UG Operations Efficiency', obj:'Improve operational throughput in UG by 15%', kpi:'15% throughput improvement vs 2025 baseline', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Logistics & Export', obj:'Ensure smooth export logistics UG→EU', kpi:'0 shipment delays due to documentation; OTIF ≥90%', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Team Management UG', obj:'Lead and develop the UG operations team', kpi:'>80% team satisfaction; 0 unplanned departures', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Facility Management', obj:'Maintain facility standards and safety compliance', kpi:'0 safety incidents; facility audit passed', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Grow supply chain and operations leadership skills', kpi:'Complete 1 operations management course; implement 1 improvement', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'100% deliveries meeting specification', obj:'Support achievement of 100% deliveries meeting specification through accurate quality data tracking and reporting', kpi:'1. Maintain updated process documents developed for all 7 products\n2. Clear traceability records per product batch\n3. Clear and well structured COGS data and metrics\n4. Ensure complete and right data collected in the supply chain operations\n5. Review and analysis (Results and KPI Metrics)\n6. Ensure alignment/fulfillment of the systems/requirements with both processors\n7. Provide monthly delivery-to-spec performance report', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Measure and reduce quality-related losses', obj:'Measure and reduce quality-related losses affecting COGS (€13/kg target) and gross margin (35%)', kpi:'1. Develop quality loss tracking system (waste, downgrade, rework)\n2. Provide monthly cost-of-quality report\n3. Quantify quality loss per KG\n4. Support reduction of quality-related loss % vs Q1 baseline\n5. Provide quarterly improvement recommendations', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Accurate operational data tracking', obj:'Provide accurate operational data tracking to support company operational KPIs', kpi:'1. Develop a live dashboard for (KG sold vs 62,000 target, KG sold from stock vs 24,500 target, KG produced vs 37,500 target)\n2. Provide monthly variance analysis\n3. Flag performance gaps early\n4. Ensure data accuracy', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Structured data analysis for product performance', obj:'Support in ensuring there is a structured data analysis to support product performance, pricing control (€21/kg), and higher customer retention', kpi:'1. Track average sales price vs €21/kg target\n2. Monthly margin trend analysis per product', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development: Strengthen analytical capability', obj:'Strengthen advanced analytical capability and cross-functional business understanding to increase impact in quality, finance, and operational decision support.', kpi:'1. Develop and implement at least two automated dashboards (Quality and Operations) by mid-year, reducing manual reporting time by at least 30%\n2. Independently prepare and present at least three structured cost and margin analysis reports during 2026\n3. Identify, implement, and measure one data-driven operational improvement project in 2026\n4. Provide clear, insight-based data recommendations in at least four cross-functional review meetings during the year\n5. Complete one structured learning program in finance or sales analytics', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   emma: [
-    { title:'Quality Assurance UG', obj:'Maintain batch quality meeting all specifications', kpi:'<2% batch failure rate; 0 customer quality complaints', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'IFS Certification Preparation', obj:'Lead UG quality readiness for IFS audit', kpi:'IFS pre-audit passed; all major gaps closed by Q3', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Quality Documentation', obj:'Maintain complete and accurate quality records', kpi:'100% batch documentation complete; audit trail maintained', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Supplier Quality Checks', obj:'Implement incoming quality checks for all farmers', kpi:'100% of farmer deliveries checked; quality scorecard maintained', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Deepen food safety and quality management expertise', kpi:'Complete food safety certification; train 2 team members', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 1', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 2', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 3', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'KPI 4', obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Personal Development', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   florence: [
-    { title:'UG Field Operations', obj:'Oversee smooth day-to-day UG field operations', kpi:'98% operational uptime; 0 critical field issues unresolved >24h', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Farmer Support', obj:'Support and train farmers in production standards', kpi:'20 farmers trained; training completion rate ≥90%', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Data Collection', obj:'Ensure accurate field data collection and reporting', kpi:'Weekly field reports submitted on time; <5% data errors', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Community Relations', obj:'Maintain strong relationships with farming communities', kpi:'0 community grievances unresolved; quarterly community meetings held', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Develop agronomy and field management expertise', kpi:'Complete 1 agronomy course; implement 1 best practice improvement', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Smooth and adaptable supply chain - Sourcing', obj:'Smooth and adaptable supply chain - Sourcing', kpi:'- Ensure ≥97% of planned sourcing volumes for both jackfruit and oysternuts are met without production interruption.\n- Ensure readiness of current suppliers to scale when sourcing volumes increase by quarterly assessing suppliers on Volume reliability, Quality compliance, Responsiveness, and pricing.\n- Continue the onboarding process of a new supplier in Kenya.\n- Reduce Sourcing-Related Losses by 20% compared to 2025.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Smooth and adaptable supply chain - Traceability', obj:'Smooth and adaptable supply chain - Traceability', kpi:'- Maintain ≥97% traceability data accuracy across all suppliers.\n- Reduce Weekly Data Review Time by 40% by Q3 through a standardized review checklist.\n- Achieve ≥90% First-Time Correct Data Entry by Q3.\n- Conduct Targeted Refresher Training for 100% of Underperforming Suppliers by Q2.\n- Ensure 70% of system issues logged are resolved within 30 days.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Projects Coordination', obj:'Projects Coordination', kpi:'- Conduct PHH training to 100% of target oyster nut farmers at least 4 weeks before harvest.\n- Complete training of the 800 WE4D farmers with ≥90% attendance and full donor compliance.\n- Submit 100% of Project Reports Within Deadline.\n- Coordinate and support the sale of oyster nut oil in Uganda by Q4 2026.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Logistics Coordination (Uganda & Kenya)', obj:'Logistics Coordination (Uganda & Kenya)', kpi:'- Maintain 100% Timely Entry of Petty Cash & Logistics-Related Expenses in QuickBooks.\n- Achieve 95% Staff Advance Reconciliation Within 7 Days of Activity Completion.\n- Achieve ≥95% On-Time Delivery Rate for Uganda-Kenya shipments.\n- Achieve 98% Documentation Accuracy & Completeness Rate.\n- Maintain Logistics Cost per Ton Within ±5% of Budget.\n- Develop and Implement Cross-Border Logistics Risk Plan by Q2.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Personal Development', kpi:'- Successfully Complete the 2026 Academic Year of the Postgraduate Diploma in Monitoring & Evaluation.\n- Integrate at Least 3 M&E Tools into Fiber Foods Projects by Q4.\n- Participate in at least two accredited M&E or related professional development workshops/trainings by December 2026.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   cecilia: [
-    { title:'KE Operations Management', obj:'Establish and run efficient KE operations', kpi:'Full operations running by Q2; OTIF ≥85%', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'KE Supplier Network', obj:'Build a reliable supplier network in Kenya', kpi:'15 active certified suppliers; supply reliability ≥85%', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'KE Cost Management', obj:'Keep KE operations within budget', kpi:'Cost variance ≤8% vs plan (new market premium)', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'KE Regulatory Compliance', obj:'Ensure full compliance with Kenyan regulations', kpi:'All permits in place; 0 regulatory issues', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Grow as a market entry and operations leader', kpi:'Complete 1 relevant training; document KE market playbook', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Final product compliance to Primejack specification', obj:'Final product compliance to Primejack\'s product specification', kpi:'98% of finished product batches comply with Primejack product specifications.\nImmediate investigation and corrective action for any non-compliant batches.\nPre-shipment inspection to ensure only compliant batches are dispatched.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Strengthen Food safety and EU legislation compliance', obj:'Strengthen Food safety and EU legislation compliance', kpi:'Ensure 100% compliance of ingredients, packaging materials and production surfaces with EU legislation before approval for production use.\nWeekly factory inspection to ensure effective FSSC implementation throughout the jackfruit dehydration process.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Strengthen production quality control process', obj:'Strengthen the production quality control process for process deviation identification', kpi:'Quarterly test method validation.\nEnsure the processor maintains 100% calibration compliance for all quality control and laboratory equipment.\nTraining and assessment of Lab technicians.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Product roadmap development - New product development', obj:'Product roadmap development - New product development', kpi:'Execute new product recipe trials at the processor\'s facility and produce new product samples.\nMeet delivery deadlines for client samples and generate trial run reports.\nEnsure effective communication with the NL team and processor.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development: Data Analysis skills using AI', obj:'Enhance my Data Analysis skills for Quality Control & Assurance Monitoring using AI tools', kpi:'Adopt AI-assisted tools to analyze quality control data and improve monitoring and reporting processes.\nPrepare monthly quality summaries that identify trends, defects, and improvement opportunities.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
   yvette: [
-    { title:'KE Production Volume', obj:'Achieve KE production targets per quarterly plan', kpi:'Production targets met each quarter in KE', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'KE Product Quality', obj:'Meet Fiber Foods quality specifications from KE', kpi:'<3% batch failure rate; quality specs met', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'KE Farmer Development', obj:'Develop and train KE farmer network', kpi:'10 trained and certified KE farmers by Q3', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Production Cost KE', obj:'Achieve cost targets for KE production', kpi:'Cost per KG within planned range', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
-    { title:'Personal Development', obj:'Develop production leadership in a new market', kpi:'Lead all KE production operations independently by Q3', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'IFS documentation readiness by Q2 2026', obj:'Align Fiber Foods Quality Management documentation to IFS Standards and complete documentation readiness by end of Q2 2026.', kpi:'Complete IFS gap assessment by end Q1 2026.\nUpdate Quality Manual and key procedures to align with IFS requirements by end Q2 2026.\nMap 100% of applicable IFS clauses to documented procedures.\nConduct internal IFS readiness review by end Q2 2026.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Virtual assessment of NL warehouse', obj:'Conduct a virtual technical assessment of the new NL warehouse and align GMP, process flows, and HACCP documentation.', kpi:'Issue virtual warehouse assessment report by end Q1 2026.\nUpdate GMP procedures and warehouse SOPs by end Q2 2026.\nFinalize and approve updated process flow diagrams.\nComplete HACCP review for warehouse operations by end Q2 2026.\nAssist in closing ≥80% identified non-conformities by end Q2 2026.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Structured annual quality audits', obj:'Conduct structured annual quality audits for active processors covering Jackfruit and Oysternut operations.', kpi:'Complete Annual audit plan by Q2 2026.\nComplete minimum one full audit per processor by Q3 2026 (budget dependent).\nIssue audit reports within 10 working days.\nAim for ≥85% corrective action closure within agreed timelines.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Quality trend analysis framework', obj:'Establish a structured quality trend analysis framework for each processor to drive data-based improvement.', kpi:'Develop quality dashboard for each processor by Q3 2026 using AI.\nConduct quarterly analysis of non-conformities, complaints, lab results, yields, and CAPA effectiveness.\nIssue Q4 Quality Performance Review Report.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
+    { title:'Personal Development', obj:'Personal Development - Strengthen strategic quality leadership capability.', kpi:'Attend at least one advanced regulatory or quality-focused and one AI learning course/webinar.\nDevelop executive-level quality reporting template for management review.', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0 },
   ],
 };
 
@@ -471,39 +471,38 @@ async function loadData() {
 
   // Load each person's KPIs
   setLoading('Loading team KPIs…');
+
+  // First load the legacy shared key (ffkpi3) — this has all real team data
+  let legacy = null;
+  try { legacy = await sbGet('ffkpi3'); } catch(e) {}
+
   await Promise.all(TEAM.map(async m => {
     const key = `kpi_person_${m.id}`;
-    let data = await sbGet(key);
-    if (!data) {
-      // Try legacy shared key migration
-      data = null;
-    }
+    let data = null;
+    try { data = await sbGet(key); } catch(e) {}
+
     if (data && data.kpis) {
       personData[m.id] = data;
+    } else if (legacy && legacy[m.id] && legacy[m.id].kpis) {
+      const converted = legacy[m.id].kpis.map((k, i) => ({
+        title: k.obj ? k.obj.slice(0, 50) : (i < 4 ? `KPI ${i+1}` : 'Personal Development'),
+        obj: k.obj || '',
+        kpi: k.kpi || '',
+        midReview: k.selfMid || '',
+        midScore: k.scoreMid || 0,
+        midManagerReview: k.reviewMid || '',
+        reviewEoy: k.selfEoy || '',
+        scoreEoy: k.scoreEoy || 0,
+        reviewEoyManager: k.reviewEoy || '',
+      }));
+      personData[m.id] = { kpis: converted };
     } else {
       personData[m.id] = { kpis: DEFAULT_KPIS[m.id] || Array(5).fill(null).map((_,i) => ({
-        title: i < 4 ? `Business Target ${i+1}` : 'Personal Development',
+        title: i < 4 ? `KPI ${i+1}` : 'Personal Development',
         obj:'', kpi:'', midReview:'', midScore:0, reviewEoy:'', scoreEoy:0
       })) };
     }
   }));
-
-  // Try legacy migration from ffkpi3
-  try {
-    const legacy = await sbGet('ffkpi3');
-    if (legacy) {
-      TEAM.forEach(m => {
-        if (legacy[m.id] && legacy[m.id].kpis) {
-          // Only migrate if current data is empty (default)
-          const cur = personData[m.id];
-          const isEmpty = cur.kpis.every(k => !k.obj && !k.kpi && !k.midReview && !k.reviewEoy);
-          if (isEmpty) {
-            personData[m.id] = legacy[m.id];
-          }
-        }
-      });
-    }
-  } catch(e) {}
 }
 
 async function saveAll() {
